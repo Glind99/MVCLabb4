@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCLabb4", "MVCLabb4.csproj", "{B8C71229-4A4A-4534-BFA3-AA5CBB53D724}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{59CF8072-D8F2-4658-BCA6-7507A7ADD462}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8C71229-4A4A-4534-BFA3-AA5CBB53D724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C71229-4A4A-4534-BFA3-AA5CBB53D724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C71229-4A4A-4534-BFA3-AA5CBB53D724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C71229-4A4A-4534-BFA3-AA5CBB53D724}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9259D0E7-DBDD-4EA9-9EB0-A4342408D0F0}
+	EndGlobalSection
+EndGlobal

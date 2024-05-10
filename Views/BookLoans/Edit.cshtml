@@ -1,0 +1,59 @@
+﻿@model MVCLabb4.Models.BookLoan
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>BookLoan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BookLoanId" />
+            <div class="form-group">
+                <label asp-for="FK_CustomerID" class="control-label"></label>
+                <select asp-for="FK_CustomerID" class="form-control" asp-items="ViewBag.FK_CustomerID"></select>
+                <span asp-validation-for="FK_CustomerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FK_BookID" class="control-label"></label>
+                <select asp-for="FK_BookID" class="form-control" asp-items="ViewBag.FK_BookID"></select>
+                <span asp-validation-for="FK_BookID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LoanDate" class="control-label"></label>
+                <input asp-for="LoanDate" class="form-control" />
+                <span asp-validation-for="LoanDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReturnDate" class="control-label"></label>
+                <input asp-for="ReturnDate" class="form-control" />
+                <span asp-validation-for="ReturnDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReturnedAt" class="control-label"></label>
+                <input asp-for="ReturnedAt" class="form-control" />
+                <span asp-validation-for="ReturnedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsLateOrNotReturned" /> @Html.DisplayNameFor(model => model.IsLateOrNotReturned)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

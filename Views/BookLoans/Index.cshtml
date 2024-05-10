@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MVCLabb4.Models.BookLoan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReturnDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReturnedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsLateOrNotReturned)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoanDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReturnDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReturnedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsLateOrNotReturned)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book.Title)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BookLoanId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BookLoanId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BookLoanId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

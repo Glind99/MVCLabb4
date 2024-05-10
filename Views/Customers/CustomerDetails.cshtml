@@ -1,0 +1,39 @@
+﻿@model MVCLabb4.Models.Customer
+
+@{
+    ViewData["Title"] = "Customer Details";
+}
+
+<h1>Customer Details</h1>
+
+<div>
+    <h4>First Name: @Model.FirstName</h4>
+    <h4>Last Name: @Model.LastName</h4>
+    <h4>Address: @Model.Address</h4>
+    <h4>Phone Number: @Model.PhoneNumber</h4>
+</div>
+
+<hr />
+
+<h4>Books Borrowed:</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bookLoan in Model.BookLoans)
+        {
+            <tr>
+                <td>@bookLoan.Book.Title</td>
+                <td>@bookLoan.Book.Author</td>
+                <td>@bookLoan.Book.Genre</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index">Back to List</a>
